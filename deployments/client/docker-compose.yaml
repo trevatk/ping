@@ -1,0 +1,15 @@
+---
+version: '3.7'
+
+services:
+  ping-client:
+    image: trevatk/ping:client-0.1.0
+    container_name: ping-client
+    restart: 'no'
+    environment:
+      - PING_SERVER_URL=http://localhost:9090/
+    
+networks:
+  default:
+    name: learning-network
+    external: true

@@ -1,0 +1,15 @@
+---
+version: '3.7'
+
+services:
+  ping-server:
+    image: trevatk/ping:server-0.1.0
+    container_name: ping-server
+    restart: 'no'
+    environment:
+      - SERVER_HTTP_PORT=9090
+    
+networks:
+  default:
+    name: learning-network
+    external: true
