@@ -7,7 +7,7 @@ services:
     container_name: ping-client
     restart: 'no'
     environment:
-      - PING_SERVER_URL=http://localhost:9090/
+      - PING_SERVER_URL=http://ping-server:9090/
     
 networks:
   default:
